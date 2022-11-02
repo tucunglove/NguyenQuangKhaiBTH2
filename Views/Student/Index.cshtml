@@ -15,8 +15,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.StudentName)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentID)
+            </th>
             <th></th>
         </tr>
+
     </thead>
     <tbody>
 @foreach (var item in Model) {
@@ -25,8 +29,10 @@
                 @Html.DisplayFor(modelItem => item.StudentName)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.StudentID)
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.StudentID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.StudentID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.StudentID">Delete</a>
             </td>
         </tr>

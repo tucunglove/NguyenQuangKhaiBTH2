@@ -156,7 +156,7 @@ namespace NguyenQuangKhaiBTH2.Controllers
 
         private bool StudentExists(string id)
         {
-          return (_context.Student?.Any(e => e.StudentID == id)).GetValueOrDefault();
+          return _context.Student.Any(e => e.StudentID == id);
         }
     }
 }
